@@ -1,0 +1,40 @@
+﻿@using StokTakip.Models
+@model List<DepoGirisCikis>
+@{
+    ViewBag.Title = "Index";
+    //Layout = null;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>FİŞ NO</th>
+        <th>DEPO KODU</th>
+        <th>GİRİŞ ÇIKIŞ MİKTARI</th>
+        <th>KAYIT TARİHİ</th>
+        <th>KULLANICI ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+
+    <tbody>
+        @foreach (var depo in Model)
+        {
+            <tr>
+                <td>@depo.Id</td>
+                <td>@depo.FisNo</td>
+                <td>@depo.DepoKodu</td>
+                <td>@depo.GCMiktarı</td>
+                <td>@depo.KayitTarihi</td>
+                <td>@depo.KullaniciAdi</td>
+                <td><a href="/Depo/SİL/@depo.Id" type="button" class="btn btn-danger">SİL</a></td>
+                <td><a href="/Depo/DepoGetir/@depo.Id" type="button" class="btn btn-success">GÜNCELLE</a></td>
+            </tr>
+
+        }
+        </body>
+</table>
+<a href="/Depo/DepoEkle" class="btn btn-primary">DEPO GİRİŞ ÇIKIŞ EKLE</a>
+
+
+

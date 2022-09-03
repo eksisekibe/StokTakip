@@ -1,0 +1,33 @@
+﻿@model StokTakip.Models.DepoGirisCikis
+
+@{
+    ViewBag.Title = "DepoGetir";
+    //Layout = null;
+}
+
+@using (Html.BeginForm("GÜNCELLE", "Depo", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(u => u.Id)
+        @Html.TextBoxFor(u => u.Id, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.FisNo)
+        @Html.TextBoxFor(u => u.FisNo, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.DepoKodu)
+        @Html.TextBoxFor(u => u.DepoKodu, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.GCMiktarı)
+        @Html.TextBoxFor(u => u.GCMiktarı, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.KayitTarihi)
+        @Html.TextBoxFor(u => u.KayitTarihi, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.KullaniciAdi)
+        @Html.TextBoxFor(u => u.KullaniciAdi, new { @class = "form-control" })
+
+
+        <button class="btn btn-warning">DEPO GİRİŞ ÇIKIŞ GÜNCELLE</button>
+    </div>
+
+}

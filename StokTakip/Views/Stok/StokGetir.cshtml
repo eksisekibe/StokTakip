@@ -1,0 +1,45 @@
+﻿@model StokTakip.Models.StokKarti
+
+@{
+    ViewBag.Title = "StokGetir";
+    //Layout = null;
+}
+
+@using (Html.BeginForm("GÜNCELLE", "Stok", FormMethod.Post))
+ {
+    <div class="form-group">
+        @Html.LabelFor(u => u.Id)
+        @Html.TextBoxFor(u => u.Id, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.StokKodu)
+        @Html.TextBoxFor(u => u.StokKodu, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.StokAdi)
+        @Html.TextBoxFor(u => u.StokAdi, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.Kdv)
+        @Html.TextBoxFor(u => u.Kdv, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.Fiyat)
+        @Html.TextBoxFor(u => u.Fiyat, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.Id)
+        @Html.TextBoxFor(u => u.Id, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.Aciklama)
+        @Html.TextBoxFor(u => u.Aciklama, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.DepoKodu)
+        @Html.TextBoxFor(u => u.DepoKodu, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.KayitTarihi)
+        @Html.TextBoxFor(u => u.KayitTarihi, new { @class = "form-control" })
+
+        @Html.LabelFor(u => u.KullaniciAdi)
+        @Html.TextBoxFor(u => u.KullaniciAdi, new { @class = "form-control" })
+
+
+            <button class="btn btn-warning">ÜRÜN GÜNCELLE</button>
+    </div>
+ 
+ }

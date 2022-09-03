@@ -1,0 +1,43 @@
+﻿@using StokTakip.Models
+@model List<StokKarti>
+@{
+    ViewBag.Title = "Index";
+    //Layout = null;
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>STOK KODU</th>
+        <th>STOK ADI</th>
+        <th>KDV</th>
+        <th>FİYAT</th>
+        <th>AÇIKLAMA</th>
+        <th>DEPO KODU</th>
+        <th>KAYIT TARİHİ</th>
+        <th>KULLANICI ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+
+    <tbody>
+        @foreach (var stok in Model)
+        {
+            <tr>
+                <td>@stok.Id</td>
+                <td>@stok.StokKodu</td>
+                <td>@stok.StokAdi</td>
+                <td>@stok.Kdv</td>
+                <td>@stok.Fiyat</td>
+                <td>@stok.Aciklama</td>
+                <td>@stok.DepoKodu</td>
+                <td>@stok.KayitTarihi</td>
+                <td>@stok.KullaniciAdi</td>
+                <td><a href="/Stok/SİL/@stok.Id" type="button" class="btn btn-danger">SİL</a></td>
+                <td><a href="/Stok/StokGetir/@stok.Id" type="button" class="btn btn-success">GÜNCELLE</a></td>
+            </tr>
+
+        }
+    </body>
+</table>
+<a href="/Stok/StokEkle" class="btn btn-primary">STOK EKLE</a>
